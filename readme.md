@@ -33,3 +33,21 @@ Git中，存在工作区、暂存区、本地仓库以及远程仓库。
 * `git commit -v`：`-v`参数将显示所有差异（diff）信息。
 * `git commit -amend`：`-amend`参数用于**修改最近一次提交命令**。可对最后一次提交编辑，例如发现提交信息有误、有文件被遗漏等。**该命令可能会造成后续的冲突问题。**
   * 案例：假设忘记提交一个文件`importance.txt`，且提交信息有误，可以首先将遗漏文件添加至暂存区：`git add importance.txt`，然后提交：`git commit -amend -m "添加importance.txt文件"`。
+
+综上，我们一般使用`git commit -a`命令，其次是`git commit -m`命令。
+
+## 查看Git提交日志
+`git log`命令可查看本地仓库的历史提交记录。有如下几点：
+* `git log --oneline`：`--oneline`参数可查看历史记录的简介版本。
+* `git log -5`：这里`-5`可以查看最近的5次提交记录。
+* `git log --stat`：`-stat`参数可以增加显示修改的文件与行数。
+* `git log --author`：`--author`参数可以只显示特定作者的提交。
+
+日志部分先记这么多就行。
+
+## 查看文件每一行变更历史
+`git blame [file]`可追踪文件中每一行的变更历史，包括作者、提交哈希、提交日期和提交消息等信息。
+
+---
+
+
