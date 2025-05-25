@@ -74,8 +74,11 @@ Git中，存在工作区、暂存区、本地仓库以及远程仓库。
 采用`git branch -m master main`命令可将当前名为master的分支修改为main。
 
 ## 远程仓库和本地仓库之间建立联系
-`git getch orgin main`
+使用`git fetch orgin main`命令。
+
+## 变基
+采用`git rebase origin main`命令可以将当前的代码应用到origin仓库的main分支上。
 
 ---
 
-感觉git好难啊
+
